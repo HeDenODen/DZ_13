@@ -42,13 +42,16 @@ int main()
     }
     int max = prof[0];
     int min = prof[0];
+    int minMonth, maxMonth;
     for (int p = 0; p < 12; p++) {
         if (prof[p] > max) {
             max = prof[p];
+            maxMonth = p;
         }
         if (prof[p] < min) {
             min = prof[p];
+            minMonth = p;
         }
     }
-    cout << "Min = " << min << "\nMax = " << max << "\n\n";
+    cout << "Min profit in " << minMonth+1 << " month\nMax profit in " << maxMonth+1 << " month" << "\n\n";
 }
